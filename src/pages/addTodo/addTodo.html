@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="onSubmit()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Title</ion-label>
+        <ion-input [(ngModel)]="todo.title" name="title" type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Note</ion-label>
+        <ion-input [(ngModel)]="todo.note" name="note" type="textarea"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label fixed>Type</ion-label>
+      <ion-select [(ngModel)]="todo.type" name="Type" multiple="false">
+        <ion-option>meeting</ion-option>
+        <ion-option>workout</ion-option>
+        <ion-option>hang out</ion-option>
+        <ion-option>confrence</ion-option>
+        <ion-option>shopping</ion-option>
+        <ion-option>reminder</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button full >Add</button>
+    </ion-item>
+
+    </ion-list>
+  </form>
+</ion-content>

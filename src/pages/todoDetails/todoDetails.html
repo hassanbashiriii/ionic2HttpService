@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Todo Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header><strong>{{todo.title}}</strong></ion-card-header>
+        <ion-card-content><p><strong>Type: </strong>{{todo.type}}</p></ion-card-content>
+        <hr>
+        <ion-card-content><p>{{todo.note}}</p></ion-card-content>
+        <ion-card-content>
+          <button ion-button full color="danger" (click)="deleteTodo(todo._id.$oid)">Delete</button>
+          <button ion-button full color="" (click)="updateOnClick(todo,todo._id.$oid)">Update</button>     
+        </ion-card-content>
+    </ion-card>
+</ion-content>
